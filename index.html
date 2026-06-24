@@ -16,12 +16,31 @@
 </head>
 
 <body>
-    <!-- If we want to position the #search-container onto of the #map,
-     they have to be in the same parent -->
-    <div id="container">
+    <div id="map-container">
+        <!-- search button -->
+        <div id="search-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="search">Search</button>
+                <button class="tab-btn" data-tab="recommend">AI Recommend</button>
+            </div>
+
+            <div id="search-tab" class="tab-content active">
+                <input type="text" id="search-terms" />
+                <button id="search-btn">Search</button>
+                <div id="search-results"></div>
+            </div>
+
+            <div id="recommend-tab" class="tab-content">
+                <input type="text" id="recommend-terms" />
+                <button id="recommend-btn">Get Recommendations</button>
+                <div id="recommend-loading" class="loading"></div>
+                <div id="recommend-error" class="error"></div>
+                <div id="recommend-results"></div>
+            </div>
+        </div>
+
         <div id="singapore-map"></div>
     </div>
-
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"

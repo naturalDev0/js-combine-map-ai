@@ -1,0 +1,83 @@
+#singapore-map {
+    height: 80vh;
+}
+
+#map-container {
+    position: relative;
+}
+
+#search-container {
+    position: absolute;
+    z-index: 1000;
+    min-width: 300px;
+    min-height: 50px;
+    top: 5px;
+    left: 45px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+#search-btn {
+    margin-left: 10px;
+}
+
+#search-results {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+#search-results>div,
+#recommend-results>div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tabs {
+    margin-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background-color: #333;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.result-item {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.result-info {
+    flex: 1;
+}
+
+.result-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.loading {
+    color: #666;
+    padding: 10px;
+}
+
+.error {
+    color: red;
+    padding: 10px;
+}
